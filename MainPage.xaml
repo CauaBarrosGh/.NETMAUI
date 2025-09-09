@@ -1,0 +1,109 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="tp01.MainPage"
+             BackgroundColor="#121212">
+    
+
+    <ScrollView>
+        
+
+        <VerticalStackLayout Padding="30,60" Spacing="40">
+
+            
+            <Label Text="Aplicação Teste"
+                   HorizontalOptions="Center"
+                   TextColor="White"
+                   FontSize="36"
+                   FontAttributes="Bold"
+                   Margin="0,0,0,20"/>
+
+           
+            <Grid ColumnDefinitions="Auto, *"
+                  RowDefinitions="Auto, Auto"
+                  ColumnSpacing="15"
+                  RowSpacing="25">
+
+                <Label Text="ID"
+                       TextColor="White"
+                       FontSize="20"
+                       VerticalOptions="Center"
+                       Padding="20,0" />
+
+                
+                <Frame BorderColor="#444"
+                       CornerRadius="8"
+                       Padding="10"
+                       HasShadow="False"
+                       BackgroundColor="#1E1E1E"
+                       Grid.Row="0" Grid.Column="1">
+
+                    <Entry x:Name="entryID"
+                           TextColor="White"
+                           Placeholder="Digite seu ID"
+                           PlaceholderColor="#888"
+                           BackgroundColor="Transparent"
+                           FontSize="18"/>
+                </Frame>
+
+                
+                <Label Text="PASS"
+                       TextColor="White"
+                       FontSize="20"
+                       VerticalOptions="Center"
+                       Padding="10,0"
+                       Grid.Row="1"/>
+
+                
+                <Frame BorderColor="#444"
+                       CornerRadius="8"
+                       Padding="10"
+                       HasShadow="False"
+                       BackgroundColor="#1E1E1E"
+                       Grid.Row="1" Grid.Column="1">
+
+                    <Entry x:Name="entryPass"
+                           IsPassword="True"
+                           TextColor="White"
+                           Placeholder="Digite sua senha"
+                           PlaceholderColor="#888"
+                           BackgroundColor="Transparent"
+                           FontSize="18"/>
+                </Frame>
+            </Grid>
+
+        
+            <VerticalStackLayout Spacing="15" Padding="0,40,0,0">
+
+                <Button Text="OK"
+                        BackgroundColor="#333"
+                        TextColor="WhiteSmoke"
+                        CornerRadius="8"
+                        FontSize="20"
+                        FontAttributes="Bold"
+                        HeightRequest="50" 
+                        Clicked="OnLogarClicked"/>
+
+                <Button Text="LIMPAR"
+                        BackgroundColor="#333"
+                        TextColor="WhiteSmoke"
+                        CornerRadius="8"
+                        FontSize="20"
+                        FontAttributes="Bold"
+                        HeightRequest="50"
+                        Clicked="OnLimparClicked"/>
+
+
+                <Button Text="CRÉDITOS"
+                        BackgroundColor="#333"
+                        TextColor="WhiteSmoke"
+                        CornerRadius="8"
+                        FontSize="20"
+                        FontAttributes="Bold"
+                        HeightRequest="50" 
+                        Clicked="OnCredClicked"/>
+            </VerticalStackLayout>
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
